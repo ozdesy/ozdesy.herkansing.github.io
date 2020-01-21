@@ -1,0 +1,319 @@
+/********   * SELECTEERT ALLE ELEMENTEN *********/
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+/*********** BODY *************/
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+/**** IN DE INDEX IS DIT EEN LEGE HTML, TEKST KOMT TE VERSCHIJNEN DOOR MIDDEL VAN JAVASCRIPT ****/
+
+h1 {
+    font-size: 2em;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    color: indianred;
+    padding: 20px;
+}
+
+
+/************ NAVIGATIE *************/
+
+nav {
+    overflow: hidden;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+
+label.logo {
+    color: white;
+    font-size: 1.6em;
+    line-height: 80px;
+    padding-left: 20px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    ;
+    font-size: 1em;
+    padding: 10px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background-color: aliceblue;
+    transition: .3s;
+    color: black;
+}
+
+.checkbutton {
+    font-size: 2em;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/*li:nth-of-type(2n) {
+    background-color: black;
+    border-left: solid 2px rosybrown;
+    border-right: solid 2px rosybrown;
+}*/
+
+
+/*********** MEDIA QUERY VOOR NAVIGATIE = LUKTE NIET MET MIN WIDTH, DAAROM MET MAX WIDTH GEDAAN *BRON VIDEO IN DE INDEX*  ************/
+
+@media only screen and (max-width: 660px) {
+    .checkbutton {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: aliceblue;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: black;
+    }
+
+    a:hover,
+    a:active {
+        background: none;
+        color: steelblue;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+
+/****** FOTO HOMEPAGE ******/
+
+.fotoyesim img {
+    height: auto;
+    width: 100%
+}
+
+@media only screen and (min-width: 810px) {
+    .fotoyesim img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+
+
+/******* FLEXBOX **********/
+
+.flex-container {
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
+    margin-top: 100px;
+    align-items: center;
+
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+}
+
+.flex-item p {
+    color: black;
+    text-align: center;
+    line-height: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.flex-item p#tekst {
+    font-family: 'Karla', sans-serif;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1em;
+}
+
+p::first-letter {
+    color: rosybrown;
+}
+
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 810px) {
+    .flex-container {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+}
+
+
+
+
+
+/********* FORMULIER ***********/
+
+form {
+
+    margin: 0 auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
+    padding: 3em;
+    max-width: 50em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+    border: none;
+    transition: all .2s;
+    padding: 1em;
+    background-color: gainsboro;
+}
+
+legend {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+input {
+    border-color: black;
+    padding: .25em;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    width: 100%;
+    transition: all 2s;
+}
+
+input:focus {
+    background-color: rosybrown;
+    border: dotted white;
+    transition: all 0.5s;
+    padding: 1em;
+    height: 2em;
+
+}
+
+button {
+    font-size: 20px;
+    color: black;
+    border-color: black;
+    background-color: rosybrown;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
+textarea {
+    border: solid 2px black;
+    padding: .25em;
+    font-size: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    transition: all 2s;
+}
+
+textarea:focus {
+    background-color: rosybrown;
+    border: dotted white;
+    transition: all 0.5s;
+}
+
+
+/******* SCROLL OMHOOG********/
+
+
+#restart {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    color: rosybrown;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 600px;
+    margin-right: 150px;
+}
+
+#restart.restartenAan {
+    display: block;
+}
+
+
+
+/******** FOOTER **********/
+footer p {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    text-align: right;
+    font-family: 'Karla', sans-serif;
+    font-size: 0.8em;
+}

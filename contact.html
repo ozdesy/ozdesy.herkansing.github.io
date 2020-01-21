@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- *************** STYLESHEET CSS ****************-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--******** HAMBURGER ICOON ******** Dit hamburgericoon komt vanuit de bron van de navigatiebar ******* -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- *************** LETTERTYPES VAN GOOGLE FONTS *************** -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ********** NAVIGATION BAR BRON: https://www.youtube.com/watch?v=oLgtucwjVII ************* navigatie gemaakt met in css met een checkbox. Checkbox is verborgen, voor de hamburgericoon was er ook een link in de video * hierboven vermeld *********-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">ozdesy</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blackey.html">Blackey</a></li>
+            <li><a href="designs.html">Designs</a></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- ****** EINDE NAVIGATION BAR ********* -->
+
+    <!-- ***** LEGE H1 VOOR DE JAVASCRIPT ******* -->
+    <h1>
+
+    </h1>
+
+    <!-- ***** LEGE H1 VOOR DE JAVASCRIPT ******** -->
+
+    <!-- ****** CONTACTFORMULIER ********* -->
+    <form action="contact.html" id="formulier" method="get">
+        <fieldset>
+            <legend>Contactgegevens</legend>
+            <label>Naam
+                <input type="text" name="naam" /></label>
+            <label>E-mailadres
+                <input type="text" name="email" /></label>
+            <label>Telefoonnummer
+                <input type="text" name="mobiel" /></label>
+            <label>Type hier je bericht</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="8"></textarea>
+        </fieldset>
+        <button id="button">Send</button>
+    </form>
+
+    <!--restart-->
+    <div id="restart">
+        <p>Click to send</p>
+    </div>
+
+    <!-- ******** EINDE CONTACTFORMULIER ************* -->
+
+
+    <!-- *********** FOOTER *********** -->
+    <footer>
+        <p>Copyright © 2020 Ozdesy</p>
+    </footer>
+</body>
+
+<!-- ******* JAVASCRIPT ********* -->
+<script src="js/eindopdracht.js"></script>
+
+</html>
